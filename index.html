@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCO | In OSCO We Trust</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0078D4;
+            --secondary: #28A745;
+            --dark: #05080b;
+            --white: #ffffff;
+            --border: rgba(255, 255, 255, 0.1);
+            --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 300;
+        }
+
+        /* --- BACKGROUND LAYER --- 
+           Ganti URL di bawah ini dengan gambar latar belakang Anda
+        --------------------------------------------------------- */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(5, 8, 11, 0.8), rgba(5, 8, 11, 0.9)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070') center/cover no-repeat;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        .logo span { color: var(--secondary); }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 2.5rem;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { opacity: 1; }
+
+        /* Hero / Header Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 10vw, 5rem);
+            font-weight: 200;
+            letter-spacing: -2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .jargon {
+            font-size: 1rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Section Global */
+        .section {
+            padding: 120px 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        /* --- CONTACT FORM (REFERENSI ARCHITECT) --- */
+        .contact-wrapper {
+            width: 100%;
+            max-width: 700px;
+        }
+
+        #waForm {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
